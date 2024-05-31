@@ -1,0 +1,26 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+
+.wrapper__element:nth-child(5){
+    grid-column: span 3;
+
+}
+
+.wrapper__element:nth-child(3){
+    grid-column: span 2;
+}
+/* 
+последние 2 стиля:
+указывает порядковый номер дочернего элемента, 
+span указывает на то сколько элементов он займет. То есть span 2 значит данный элемент займет место 2-ух элементов 
+
+Но в данном случае образовывается пробел, есть вариант его заполнить:
+*/
+
+.wrapper{
+    grid-auto-flow: dense;
+}
